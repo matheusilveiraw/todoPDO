@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+          <h2 class="text-center mt-5">Cadastra-se</h2>
+          <form class="border border-primary rounded p-2" method="POST" action="valida_cadastro.php"> 
+    
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" placeholder="Enter email" name="email">
+            </div>
+    
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" placeholder="Password" name="senha">
+            </div>
+    
+            <button type="submit" class="btn btn-primary mt-2">Cadastra-se</button>
+    
+          </form>
+    
+          <div class="text-center mt-2">
+            <a href="login.html">Já tem conta? Logue-se!</a>
+          </div>
+    
+        </div>
+      </div>
+</body>
+</html>
