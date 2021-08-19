@@ -1,3 +1,9 @@
+<?php 
+
+  //echo $_GET['login'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +23,16 @@
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" placeholder="Enter email" name="email">
+
+              <?php 
+
+              if(isset($_GET['login'])) { 
+                if($_GET['login'] == 'erro1') { 
+                  echo "<p class='text-danger'>Esse email já foi usado para cadastro!</p>";
+                }
+              }
+
+              ?>
             </div>
     
             <div class="form-group">
@@ -29,7 +45,7 @@
           </form>
     
           <div class="text-center mt-2">
-            <a href="login.html">Já tem conta? Logue-se!</a>
+            <a href="login.php">Já tem conta? Logue-se!</a>
           </div>
     
         </div>

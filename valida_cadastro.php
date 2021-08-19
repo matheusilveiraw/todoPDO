@@ -59,8 +59,9 @@
     } else { 
         //DIZER QUE O EMAIL JÁ FOI CADASTRADO COM UM ERRO NA PRÓPRIA PÁGINA 
         echo 'Cadastro não realizado!';
+        header('Location: cadastro.php?login=erro1');
+        //erro1 basicamente erro que já existe outro cadastro com esse email
     }
-
 
    } catch(PDOException $e) { 
        echo 'Erro' .$e->getCode().' Mensagem: '.$e->getMessage();
