@@ -1,4 +1,5 @@
 <?php 
+   session_start();
 
    print_r($_POST);
 
@@ -44,10 +45,15 @@
                 echo 'Senha compativel! Login!'; 
                 $senhaOk = true;
 
-                header('Location: principal.html');
+                header('Location: principal.php');
+
+                $_SESSION['logado'] = true; //vou usar esse indice para dizer que tá logado ou não 
+                $_SESSION['usuario'] = $_POST['email'];
+                $_SESSION['idUser'] = $value[0]
+;
                 //entrar na tela principal para criar os to dos 
                 break;
-                //precisa setar algumas informações e preciso manter o usuario logado, assim como não deixar alguém entrar sem logar 
+                //precisa setar algumas informações e preciso manter o usuario logado, assim como não deixar alguém entrar sem logar, para manter logado, é por aqui que precisa passar
             } else { 
                 echo 'Senha incompatvel!';
                 //encaminhar para login com erro de senha
