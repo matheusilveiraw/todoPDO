@@ -1,3 +1,4 @@
+
 <?php 
 
     session_start();
@@ -24,13 +25,20 @@
             <h3 class="text-center">O que você deseja fazer? </h3>
 
             <div class="text-center">
-                <a href="to_dos/add_to_do.php">Adicionar To Do</a> | <a href="http://"></a> | <a href="http://"></a>
+                <a href="add_to_do.html">Adicionar To Do</a> | <a href="http://"></a> | <a href="http://"></a>
             </div>
 
-            
-            <div id="conteudoAjax" class="mt-4">
+            <div class="mt-4">
+                <form action="../inserir_tarefa.php" method="POST" class="text-center">
+                    <label for="">
+                        To Do: <input type="text" name="to_do" id="" placeholder="Insira o nome da atividade">
+                    </label>
+                
+                    <button type="submit">
+                        Guardar to do
+                    </button>
+                </form>
             </div>
-
 
         </div>
     </div>

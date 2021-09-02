@@ -5,3 +5,10 @@ CREATE TABLE tb_usuarios(
     email VARCHAR(50) NOT NULL,
     senha INT NOT NULL
 )
+
+CREATE TABLE tb_to_dos(
+    id_to_do INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    descricao TEXT NOT NULL,
+    id_usuario INT NOT NULL, #FOREIGN KEY
+    FOREIGN KEY(id_usuario) REFERENCES tb_usuarios(id)
+)

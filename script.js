@@ -19,3 +19,4 @@ function chamarPg(url) {
 
     ajax.send()
 }
+    
