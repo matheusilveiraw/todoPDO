@@ -1,0 +1,16 @@
+CREATE DATABASE db_to_do;
+
+CREATE TABLE tb_usuarios(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(50) NOT NULL,
+    senha INT NOT NULL
+)
+
+CREATE TABLE tb_to_dos(
+    id_to_do INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    descricao TEXT NOT NULL,
+    id_usuario INT NOT NULL, #FOREIGN KEY
+    FOREIGN KEY(id_usuario) REFERENCES tb_usuarios(id),
+    status BIT NOT NULL #0 - to do criado, não foi finalizado, 1 to do finalziado 
+    #VOU TER QUE CRIAR UMA COLUNA PARA STATUS AQUI, PARA SABER SE MOSTRO O TO DO NO CONCLUIDO OU NOS TO DOS MESMO 
+)
