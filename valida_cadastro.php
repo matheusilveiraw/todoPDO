@@ -45,7 +45,11 @@
         //DIZER QUE O CADASTRO FOI UM SUCESSO, IR PARA TELA DE LOGIN
 
         $query = '
+<<<<<<< HEAD
         insert into tb_usuarios( 
+=======
+        insert into tb_usuarios(
+>>>>>>> 4ec6963a235f7b13d6f11160ec6f2b2f8a04b83e
             email, senha 
         ) values (
             "'. $_POST['email'].'", "'.$_POST['senha'].'"

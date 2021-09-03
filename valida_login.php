@@ -24,7 +24,11 @@
     
     echo '<pre>';
     print_r($lista);
+<<<<<<< HEAD
     echo '</pre>'; 
+=======
+    echo '</pre>';
+>>>>>>> 4ec6963a235f7b13d6f11160ec6f2b2f8a04b83e
     $cadastro = true;
 
 
@@ -45,7 +49,10 @@
                 echo 'Senha compativel! Login!'; 
                 $senhaOk = true;
 
+<<<<<<< HEAD
                 $_SESSION['user_id'] = $value[0];
+=======
+>>>>>>> 4ec6963a235f7b13d6f11160ec6f2b2f8a04b83e
                 header('Location: principal.php');
 
                 $_SESSION['logado'] = true; //vou usar esse indice para dizer que tá logado ou não 
