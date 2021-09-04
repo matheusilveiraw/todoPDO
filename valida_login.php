@@ -15,23 +15,18 @@
        SELECT * FROM tb_usuarios
                 ';
 
-    $stmt = $conexao->query($query);   
+        $stmt = $conexao->query($query);   
 
     //$lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    $lista = $stmt->fetchAll(PDO::FETCH_NUM);
+        $lista = $stmt->fetchAll(PDO::FETCH_NUM);
 
     
     echo '<pre>';
     print_r($lista);
-<<<<<<< HEAD
     echo '</pre>'; 
-=======
-    echo '</pre>';
->>>>>>> 4ec6963a235f7b13d6f11160ec6f2b2f8a04b83e
+    
     $cadastro = true;
-
-
     //essa variavel vai servir simplesmente para eu conseguir levar o programa ao erro quando nem usuario nem senha forem compativeis, ela vai estar com false e vai virar true qnd cair no erro de email e vai virar false quando o erro for na senha
     $senhaOk = false;
     $emailOk = false;    
@@ -49,10 +44,7 @@
                 echo 'Senha compativel! Login!'; 
                 $senhaOk = true;
 
-<<<<<<< HEAD
                 $_SESSION['user_id'] = $value[0];
-=======
->>>>>>> 4ec6963a235f7b13d6f11160ec6f2b2f8a04b83e
                 header('Location: principal.php');
 
                 $_SESSION['logado'] = true; //vou usar esse indice para dizer que tá logado ou não 
@@ -82,6 +74,7 @@
 
         if($emailOk == false && $senhaOk == false) { 
             header('Location: login.php?login=erro1');
+            //passar um valor para aparecer uma mensagem quando voltar para a página
         }
 
 
@@ -89,7 +82,6 @@
 
    } catch(PDOException $e) { 
        echo 'Erro' .$e->getCode().' Mensagem: '.$e->getMessage();
-       //registra erro
    }
 
 ?>

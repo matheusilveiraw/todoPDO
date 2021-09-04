@@ -24,8 +24,7 @@
             <h3 class="text-center">O que você deseja fazer? </h3>
 
             <div class="text-center">
-                <a href="to_dos/add_to_do.php">Adicionar To Do</a> | <a href="http://"></a> | <a href="http://"></a>
-            </div>
+            <a href="to_dos/add_to_do.php">Adicionar To Do</a> | <a href="to_dos/lista_to_dos.php">To Dos Incompletos</a> | <a href="to_dos/to_dos_concluidos.php">To Dos Completos</a>            </div>
 
             
             <div id="conteudoAjax" class="mt-4">

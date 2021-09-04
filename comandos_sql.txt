@@ -10,11 +10,7 @@ CREATE TABLE tb_to_dos(
     id_to_do INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     descricao TEXT NOT NULL,
     id_usuario INT NOT NULL, #FOREIGN KEY
-<<<<<<< HEAD
     FOREIGN KEY(id_usuario) REFERENCES tb_usuarios(id),
     status BIT NOT NULL #0 - to do criado, não foi finalizado, 1 to do finalziado 
-=======
-    FOREIGN KEY(id_usuario) REFERENCES tb_usuarios(id)
->>>>>>> 4ec6963a235f7b13d6f11160ec6f2b2f8a04b83e
     #VOU TER QUE CRIAR UMA COLUNA PARA STATUS AQUI, PARA SABER SE MOSTRO O TO DO NO CONCLUIDO OU NOS TO DOS MESMO 
 )
