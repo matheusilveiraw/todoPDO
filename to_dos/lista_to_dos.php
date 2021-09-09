@@ -39,7 +39,9 @@ print_r($_SESSION);
 
                     $conexao = new PDO($dsn, $usuario, $senha);
 
-                    $query = "SELECT descricao FROM tb_to_dos WHERE id_usuario = 12 AND status_to_do = 0;";
+                    $query = 'SELECT descricao FROM tb_to_dos WHERE id_usuario = "'.$_SESSION['user_id'].'" AND status_to_do = 0;';
+                    //descricao = "'.$_POST['to-do'].'" AND id_usuario = "'.$_SESSION['user_id'].'"  ';
+
 
                     $stmt = $conexao->query($query);   
 
@@ -50,24 +52,23 @@ print_r($_SESSION);
                     echo '</pre>'; 
 
                     foreach($lista as $value) { 
+
                         echo "
-                        <form method='GET' action='../conclui_to_do.php'>
-                            <input type='text' value=".$value[0]." readonly class='input-lista-to-dos'>
+                        <form method='POST' action='../conclui_to_do.php' class='text-center'>
+                            <input type='text' value='$value[0]' name='to-do' readonly class='input-lista-to-dos'>
                             <input type='submit' value='Concluir'>
                         </form>";
                     }
-
                 } catch(PDOException $e) { 
                     echo 'Erro' .$e->getCode().' Mensagem: '.$e->getMessage();
                 }
-
             ?>
         </div>
-
     </div>
 </div>
 
 <script src="../script.js">
 </script>
+
 </body>
 </html>

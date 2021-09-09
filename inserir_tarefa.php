@@ -38,6 +38,8 @@
     //     ';
 
     $conexao->exec($query);   
+
+    header('Location: to_dos/add_to_do.php');
     
     } catch(PDOException $e) { 
         echo 'Erro' .$e->getCode().' Mensagem: '.$e->getMessage();

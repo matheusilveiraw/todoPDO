@@ -15,6 +15,7 @@ print_r($_SESSION);
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
+<link rel="stylesheet" href="../style.css">
 
 <title>To Do - Concluidos</title>
 </head>
@@ -38,8 +39,8 @@ print_r($_SESSION);
 
                     $conexao = new PDO($dsn, $usuario, $senha);
 
-                    $query = 'SELECT * FROM `tb_to_dos` WHERE id_usuario = 5 AND status_to_do = 0';
-
+                    $query = 'SELECT descricao FROM tb_to_dos WHERE id_usuario = "'.$_SESSION['user_id'].'" AND status_to_do = 1;';
+                    
                     $stmt = $conexao->query($query);   
 
                     $lista = $stmt->fetchAll(PDO::FETCH_NUM);
@@ -47,6 +48,15 @@ print_r($_SESSION);
                     echo '<pre>';
                     print_r($lista);
                     echo '</pre>'; 
+
+                    foreach($lista as $value) { 
+
+                        echo "
+                        <div class='text-center'>
+                            <input type='text' value='$value[0]' name='to-do' readonly class='input-lista-to-dos'>
+                        </div>";
+                        echo "<br>";
+                    }
 
                 } catch(PDOException $e) { 
                     echo 'Erro' .$e->getCode().' Mensagem: '.$e->getMessage();

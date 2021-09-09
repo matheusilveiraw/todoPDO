@@ -2,5 +2,3 @@ Olá, esse é o To Do List, a ideia surgiu a partir do momento em que eu aprendi
 
 Atualmente, o projeto não está finalizado. Implementei um sistema de login e o To Do está chegando no back end mas ainda há implementações para finalizar o projeto. 
 Atualmente, o projeto não está finalizado. Implementei um sistema de login e o To Do está chegando no back end mas ainda há implementações para finalizar o projeto. 
-=======
-Atualmente, o projeto não está finalizado. Implementei um sistema de login e o To Do está chegando no back end mas ainda há implementações para finalizar o projeto. 
