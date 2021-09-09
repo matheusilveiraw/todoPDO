@@ -19,4 +19,10 @@ function chamarPg(url) {
 
     ajax.send()
 }
+
+
+function getValor() { 
+    let valor = document.getElementById('valor').value;
+    console.log('dsda')
+}
     

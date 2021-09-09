@@ -4,4 +4,3 @@ Atualmente, o projeto não está finalizado. Implementei um sistema de login e o
 Atualmente, o projeto não está finalizado. Implementei um sistema de login e o To Do está chegando no back end mas ainda há implementações para finalizar o projeto. 
 =======
 Atualmente, o projeto não está finalizado. Implementei um sistema de login e o To Do está chegando no back end mas ainda há implementações para finalizar o projeto. 
->>>>>>> 82b4224cab30f43a693ada3c65baed1164dceb51

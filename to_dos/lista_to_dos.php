@@ -15,6 +15,8 @@ print_r($_SESSION);
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
+<link rel="stylesheet" href="../style.css">
+
 
 <title>To Dos - Não concluidos</title>
 </head>
@@ -43,27 +45,17 @@ print_r($_SESSION);
 
                     $lista = $stmt->fetchAll(PDO::FETCH_NUM);
                     
-                    // echo '<pre>';
-                    // print_r($lista);
-                    // echo '</pre>'; 
+                    echo '<pre>';
+                    print_r($lista);
+                    echo '</pre>'; 
 
                     foreach($lista as $value) { 
-                        // echo "
-                        // <form method='GET' action='../conclui_to_do.php'>
-                        // <p class='text-center' name='paragrafo'>
-                        // <span name='descricao'>
-                        //     " .$value[0]. " </span>
-                        //     <input type='submit' value='Concluir'>
-                        // </p>
-                        // </form>
-                        // ";
-
-                        echo '<form method="GET" action="../conclui_to_do.php">
-                            <input type="text">
-                            <input type="submit">
-                        </form>';
+                        echo "
+                        <form method='GET' action='../conclui_to_do.php'>
+                            <input type='text' value=".$value[0]." readonly class='input-lista-to-dos'>
+                            <input type='submit' value='Concluir'>
+                        </form>";
                     }
-
 
                 } catch(PDOException $e) { 
                     echo 'Erro' .$e->getCode().' Mensagem: '.$e->getMessage();
@@ -75,7 +67,7 @@ print_r($_SESSION);
     </div>
 </div>
 
-<script src="script.js">
+<script src="../script.js">
 </script>
 </body>
 </html>

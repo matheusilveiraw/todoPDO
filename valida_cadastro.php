@@ -23,6 +23,7 @@
     
     echo '<pre>';
     print_r($lista);
+    
     echo '</pre>';
 
     $cadastro = true;
