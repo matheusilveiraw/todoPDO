@@ -1,0 +1,28 @@
+/* * { 
+    margin: 0;
+} */
+
+.input-lista-to-dos { 
+    border: none;
+}
+
+.centraliza-box-login-cadastro {
+    
+}
+
+.tamanho-box-login-cadastro {  
+    /* margin: 0 !important; */
+    /* interna */
+    width: 500px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 99999999;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 500px) { 
+    .tamanho-box-login-cadastro { 
+        width: 80%;
+    }
+ } 
