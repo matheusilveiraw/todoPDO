@@ -1,7 +1,7 @@
 <?php 
 
     session_start();
-    print_r($_SESSION);
+    //print_r($_SESSION);
 
 ?>
 
@@ -20,20 +20,16 @@
 <body>
     <div class="container">
         <div class="row">
-            <h2 class="text-center">Bem-vindo ao sistema!</h2>
-            <h3 class="text-center">O que você deseja fazer? </h3>
+            <div>
+                <h2 class="text-center">Bem-vindo ao sistema!</h2>
+                <h3 class="text-center">O que você deseja fazer? </h3>
 
-            <div class="text-center">
-            <a href="to_dos/add_to_do.php">Adicionar To Do</a> | <a href="to_dos/lista_to_dos.php">To Dos Incompletos</a> | <a href="to_dos/to_dos_concluidos.php">To Dos Completos</a>            </div>
-
-            
-            <div id="conteudoAjax" class="mt-4">
+                <div class="text-center">
+                    <a href="to_dos/add_to_do.php">Adicionar To Do</a> | <a href="to_dos/lista_to_dos.php">To Dos Incompletos</a> | <a href="to_dos/to_dos_concluidos.php">To Dos Completos</a>
+                </div>
             </div>
-
-
         </div>
     </div>
-
     <script src="script.js">
     </script>
 </body>
