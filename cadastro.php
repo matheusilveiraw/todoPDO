@@ -12,16 +12,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Cadastro</title>
 </head>
 <body>
-    <div class="container">
-        <div class="col">
-          <h2 class="text-center mt-5">Cadastra-se</h2>
+    <!-- <div class="container">
+        <div class="col"> -->
+      <div class="centraliza-box-login-cadastro">
+        <div class="tamanho-box-login-cadastro">
           <form class="border border-primary rounded p-2" method="POST" action="valida_cadastro.php"> 
-    
+            <h2 class="text-center mt-1">Cadastra-se</h2>
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" placeholder="Enter email" name="email">
@@ -35,6 +36,7 @@
               }
 
               ?>
+
             </div>
     
             <div class="form-group">
