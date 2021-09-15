@@ -22,25 +22,24 @@
 <body>
     <div class="container">
         <div class="row">
-            <h2 class="text-center">Bem-vindo ao sistema!</h2>
-            <h3 class="text-center">O que você deseja fazer? </h3>
+            <div class="">
+                <div class="box-menu mr-2 ml-2">
+                    <h3 class="text-center">MENU</h3>
 
-            <div class="text-center">
-                <a href="add_to_do.php">Adicionar To Do</a> | <a href="lista_to_dos.php">To Dos Incompletos</a> | <a href="to_dos_concluidos.php">To Dos Completos</a>
-            </div>
+                    <div class="text-center">
+                        <a href="add_to_do.php" class="underline">Adicionar To Do</a> | <a href="lista_to_dos.php">To Dos Incompletos</a> | <a href="to_dos_concluidos.php">To Dos Completos</a>
+                    </div>
+                </div>
 
-            <div class="mt-4">
-                <form action="../inserir_tarefa.php" method="POST" class="text-center">
-                    <label for="">
-                        To Do: <input type="text" name="to_do" id="" placeholder="Insira o nome da atividade">
-                    </label>
-                
-                    <button type="submit">
-                        Guardar to do
-                    </button>
+                <form action="../inserir_tarefa.php" method="POST" class="mt-2">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Insira seu to do aqui" name="to_do">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-danger" type="submit">Criar to do!</button>
+                            </div>
+                        </div>
                 </form>
             </div>
-
         </div>
     </div>
 

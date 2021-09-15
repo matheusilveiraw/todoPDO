@@ -1,18 +1,14 @@
-/* * { 
-    margin: 0;
-} */
-
 .input-lista-to-dos { 
     border: none;
 }
 
-.centraliza-box-login-cadastro {
-    
+.input-lista-to-dos:focus { 
+    box-shadow: none;
+    outline: none;
 }
 
 .tamanho-box-login-cadastro {  
-    /* margin: 0 !important; */
-    /* interna */
+    /* acabou virando uma box para centralizar */
     width: 500px;
     margin: 0 auto;
     position: absolute;
@@ -25,4 +21,58 @@
     .tamanho-box-login-cadastro { 
         width: 80%;
     }
+
+    .box-menu { 
+        margin-right: 10px;
+    }
  } 
+
+ .box-menu {
+     border: 1px solid purple;
+     padding: 15px 0;
+     /* margin-top: 10px; *//* topo | direita | inferior | esquerda */
+     margin: 10px 0 0 0;
+     background-color: #fbbefb;
+     transition: 0.5s;
+    }
+
+ .box-menu:hover {
+    box-shadow: 2.5px 1.25px 5px black;
+   }
+
+ /* @media (max-width: 600px) { 
+    .box-menu { 
+       width: 90%;
+    }
+ }  */
+
+ a { 
+    text-decoration: none;
+    color: purple;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: font-weight 0.2s;
+ }
+
+ a:hover { 
+    font-weight: 700;
+    color: red;
+
+ }
+
+a.underline { 
+    border-bottom: 1px solid purple;
+    transition: 0.2s;
+}
+
+a.underline:hover { 
+    border-bottom: 2px solid red;
+}
+
+.box-listar {
+    border: 1px solid purple;
+    padding: 15px 0;
+    /* margin-top: 10px; *//* topo | direita | inferior | esquerda */
+    margin: 10px 10px 0 10px;
+    background-color: #fbbefb;
+   }

@@ -22,49 +22,95 @@ session_start();
 <body>
 <div class="container">
     <div class="row">
-        <h2 class="text-center">Bem-vindo ao sistema!</h2>
-        <h3 class="text-center">O que você deseja fazer? </h3>
+            <div class="">
+                <div class="box-menu mr-2 ml-2">
+                    <h3 class="text-center">MENU</h3>
 
-        <div class="text-center">
-            <a href="add_to_do.php">Adicionar To Do</a> | <a href="lista_to_dos.php">To Dos Incompletos</a> | <a href="to_dos_concluidos.php">To Dos Completos</a>
-        </div>
+                    <div class="text-center">
+                        <a href="add_to_do.php">Adicionar To Do</a> | <a href="lista_to_dos.php">To Dos Incompletos</a> | <a href="to_dos_concluidos.php"  class="underline">To Dos Completos</a>
+                    </div>
+                </div>
+            </div>
 
-        <div class="mt-4">
-            <?php
-                $dsn = 'mysql:host=localhost;dbname=db_to_do';
-                $usuario = 'root';
-                $senha = '';
+            <div class="">
+                <div class="mt-4 box-listar">
+                <h4 class="text-center">To Dos - Completos </h4>
+                    <?php
+                        $dsn = 'mysql:host=localhost;dbname=db_to_do';
+                        $usuario = 'root';
+                        $senha = '';
 
-                try { 
+                        try { 
 
-                    $conexao = new PDO($dsn, $usuario, $senha);
+                            $conexao = new PDO($dsn, $usuario, $senha);
 
-                    $query = 'SELECT descricao FROM tb_to_dos WHERE id_usuario = "'.$_SESSION['user_id'].'" AND status_to_do = 1;';
-                    
-                    $stmt = $conexao->query($query);   
+                            $query = 'SELECT descricao FROM tb_to_dos WHERE id_usuario = "'.$_SESSION['user_id'].'" AND status_to_do = 1;';
+                                    
+                            $stmt = $conexao->query($query);   
 
-                    $lista = $stmt->fetchAll(PDO::FETCH_NUM);
-                    
-                    // echo '<pre>';
-                    // print_r($lista);
-                    // echo '</pre>'; 
+                            $lista = $stmt->fetchAll(PDO::FETCH_NUM);
+                                    
+                            // echo '<pre>';
+                            // print_r($lista);
+                            // echo '</pre>'; 
 
-                    foreach($lista as $value) { 
+                            foreach($lista as $value) { 
 
-                        echo "
-                        <div class='text-center'>
-                            <input type='text' value='$value[0]' name='to-do' readonly class='input-lista-to-dos'>
-                        </div>";
-                        echo "<br>";
-                    }
+                                echo "
+                                <div class='text-center'>
+                                <span>$value[0]</span>
+                                </div>";
+                                echo "<br>";
+                                // <input type='text' value='$value[0]' name='to-do' readonly class='input-lista-to-dos'>
 
-                } catch(PDOException $e) { 
-                    echo 'Erro' .$e->getCode().' Mensagem: '.$e->getMessage();
-                }
+                            }
 
-            ?>
-        </div>
+                        } catch(PDOException $e) { 
+                            echo 'Erro' .$e->getCode().' Mensagem: '.$e->getMessage();
+                        }
+                    ?>
+                </div>
+            </div>
 
+            <!-- <div class="">
+                <div class="mt-4 box-lista-to-dos mb-2">
+                    <h4 class="text-center">To Dos - Completos </h4>
+                    <?php
+                        $dsn = 'mysql:host=localhost;dbname=db_to_do';
+                        $usuario = 'root';
+                        $senha = '';
+
+                        try { 
+
+                            $conexao = new PDO($dsn, $usuario, $senha);
+
+                            $query = 'SELECT descricao FROM tb_to_dos WHERE id_usuario = "'.$_SESSION['user_id'].'" AND status_to_do = 1;';
+                                    
+                            $stmt = $conexao->query($query);   
+
+                            $lista = $stmt->fetchAll(PDO::FETCH_NUM);
+                                    
+                            // echo '<pre>';
+                            // print_r($lista);
+                            // echo '</pre>'; 
+
+                            foreach($lista as $value) { 
+
+                                echo "
+                                <div class='text-center'>
+                                <span>$value[0]</span>
+                                </div>";
+                                echo "<br>";
+                                // <input type='text' value='$value[0]' name='to-do' readonly class='input-lista-to-dos'>
+
+                            }
+
+                        } catch(PDOException $e) { 
+                            echo 'Erro' .$e->getCode().' Mensagem: '.$e->getMessage();
+                        }
+                    ?>
+                </div>
+            </div> -->
     </div>
 </div>
 
